@@ -8,9 +8,17 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <%# <script src="https://cdn.tailwindcss.com"></script> %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar">
+      <%# <h3>wikinimous</h3> %>
+      <h3><%= link_to "wikinimous", articles_path %></h3>
+      <%# <h4>New article</h4> %>
+      <h4><%= link_to "New article", new_article_path %></h4>
+    </nav>
+      <%= yield %>
   </body>
 </html>

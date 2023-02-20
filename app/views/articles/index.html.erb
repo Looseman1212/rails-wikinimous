@@ -1,0 +1,6 @@
+<div class="homepage-container">
+  <% @articles.each do |article| %>
+    <h3><%= link_to article.title, article_path(article) %></h3>
+    <p><%= article.content %></p>
+  <% end %>
+<div class="homepage-container">
